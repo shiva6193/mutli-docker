@@ -11,7 +11,7 @@ after_sucess:
   - docker build -t shiva6193/multi-client ./client
   - docker build -t shiva6193/multi-server ./server
   - docker build -t shiva6193/multi-worker ./worker
-  - docker build -t shiva6193/multi-nginx ./ngnix
+  - docker build -t shiva6193/multi-nginx ./nginx
 
 
 #login to docker
@@ -20,7 +20,7 @@ after_sucess:
 
 #push images to docker
 
-  - docker push  shiva6193/multi-client
+  - docker push shiva6193/multi-client
   - docker push shiva6193/multi-nginx
   - docker push shiva6193/multi-server
   - docker push shiva6193/multi-worker
