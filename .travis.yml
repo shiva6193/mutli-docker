@@ -14,7 +14,7 @@ after_sucess:
   - docker build -t shiva6193/multi-nginx ./nginx
 
 
-#login to docker
+#login to docker hub 
 
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
