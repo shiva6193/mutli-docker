@@ -5,7 +5,7 @@ services:
 before_install:
   - docker build -t shiva6193/react-test -f ./client/Dockerfile.dev ./client
 script:
-  - docker run shiva6193/react-test pm test -- --coverage
+  - docker run shiva6193/react-test npm test -- --coverage
 
 after_sucess:
   - docker build -t shiva6193/multi-client ./client
@@ -19,3 +19,8 @@ after_sucess:
   - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
 
 #push images to docker
+
+  - docker push  shiva6193/multi-client
+  - docker push shiva6193/multi-nginx
+  - docker push shiva6193/multi-server
+  - docker push shiva6193/multi-worker
