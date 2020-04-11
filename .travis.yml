@@ -24,3 +24,18 @@ after_sucess:
   - docker push shiva6193/multi-nginx
   - docker push shiva6193/multi-server
   - docker push shiva6193/multi-worker
+
+
+deploy:
+  provide: elasticbeanstalk
+  region: ap-south-1
+  app: Mult-Docker
+  env: MutliDocker-env
+  bucker_name: elasticbeanstalk-ap-south-1-592479170546
+  bucket_path: Mutli-Docker
+
+  on:
+    branch: master
+    access_key_id: $AWS_ACCESS_KEY 
+    secret_access_key:
+      secure: $AWS_SECRET_KEY
