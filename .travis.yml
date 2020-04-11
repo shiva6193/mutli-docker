@@ -29,13 +29,13 @@ after_sucess:
 deploy:
   provider: elasticbeanstalk
   region: ap-south-1
-  app: Mult-Docker
+  app: Mutli-Docker
   env: MutliDocker-env
   bucker_name: elasticbeanstalk-ap-south-1-592479170546
   bucket_path: Mutli-Docker
 
   on:
     branch: master
-  access_key_id: AKIAYT4UCV7ZLB5D4WNW 
+  access_key_id: $AWS_ACCESS_KEY 
   secret_access_key:
-    secure: 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
+    secure: $AWS_SECRET_KEY
