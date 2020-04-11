@@ -35,5 +35,6 @@ deploy:
   region: ap-south-1
   app: Mutli-Docker
   env: MutliDocker-env
-  bucker_name: elasticbeanstalk-ap-south-1-592479170546
+  bucker_name: /elasticbeanstalk-ap-south-1-592479170546
+  
   
